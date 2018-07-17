@@ -1,0 +1,17 @@
+
+#include "stdafx.h"
+{
+	int sum=0;
+	int n;
+	int score;
+	printf_s("请输入班级人数");
+	scanf_s("%d",&n);
+	for (int i = 1; i <=n; i++)
+	{
+			printf("请输入第%d名同学成绩", i);
+			scanf_s("%d", &score);
+			sum +=score;
+	}
+	printf("平均分是%lf分", sum *1.0/ n);
+	return 0;
+}
