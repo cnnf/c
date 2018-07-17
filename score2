@@ -1,0 +1,20 @@
+#include "stdafx.h"
+
+int main()
+{
+	int n = 0;
+	int sum = 0;
+	int temp;  
+	printf("请输入第%d名同学成绩", n + 1);
+	scanf_s("%d", &temp);
+	while (temp > 0)
+	{
+		n++;
+		sum+=temp;
+		printf("请输入第%d名同学成绩", n + 1);
+		scanf_s("%d", &temp);
+	}
+	printf("平均分是;%g", sum*1.0/ n);
+	return 0;
+}
+
