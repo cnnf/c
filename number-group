@@ -1,0 +1,14 @@
+#include <stdafx.h>
+int main()
+{
+	float cj[5];
+	for (int i = 0; i < 5; i++)
+	{
+		scanf_s("%f", &cj[i]);
+	}
+	for (int i = 0; i < 5; i++)
+	{
+		printf_s("%f\n", cj[i]);
+	}
+  return 0;
+}
