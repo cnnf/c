@@ -1,0 +1,21 @@
+#include <stdafx.h>
+int a = 1, b = 2;//
+void swap(/*int a, int b*/);
+int main()
+
+
+{
+	
+	printf("a=%d\n b=%d\n", b, a);
+	swap(/*a, b*/);
+	printf("a=%d\nb=%d\n", b, a);
+
+	return 0;
+}
+void swap(/*int a, int b*/)
+{
+	int t = a;
+	a = b;
+	b = t;
+	
+}
