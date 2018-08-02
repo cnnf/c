@@ -1,0 +1,22 @@
+#include "stdafx.h"
+void root2(double a, double b, double c)
+{
+	double tmp, d = b * b - 4 * a*c;  
+	if (d > 0) 
+	{
+		tmp = sqrt(d);   
+		printf("Two real roots: %f, %f\n",(-b + tmp) / 2 / a, (-b - tmp) / 2 / a);
+	}
+	else if (d == 0)     
+		printf("One real root: %f\n", -b / 2 / a);  
+	else    
+		printf("No real root\n");
+}
+int main() 
+{
+	int i, j, k;
+	scanf_s("%d,",&i);
+	scanf_s("%d,",&j);
+	scanf_s("%d,",&k);
+	root2(i, j, k);
+}
