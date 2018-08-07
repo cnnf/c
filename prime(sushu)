@@ -1,0 +1,19 @@
+#include "stdafx.h"
+
+int isprime(int n)
+{ /* 判断一个数是否素数 */
+	int m = 2;
+	for (; m * m <= n; ++m)
+		if (n % m == 0) return 0; /* 发现因子，不是素数 */
+	return 1;  /* 可能性均考虑过，没有因子，是素数 */
+}
+
+int main()
+{
+	int a;
+	scanf_s("%d", &a);
+	if (isprime(a) == 1)
+		printf("%d是素数\n", a);
+	else printf("%d是不素数\n", a);
+
+}
