@@ -1,0 +1,48 @@
+#include<stdio.h>
+int IsLeapYear(int year)
+{
+	int leap;
+	leap = (year % 4 == 0 && year % 100 == 0 || year % 400 == 0) ? 0 : 1;
+	return leap;
+}
+int GetMonthdays(int year, int month)
+{
+	int days;
+	switch (month)
+	{
+	case 1:
+	case 3:
+	case 5:
+	case 7:
+	case 8:
+	case 10:
+	case 12:
+		days = 31;
+		break;
+	case 2:
+		days = IsLeapYear(year) ? 29 : 28;
+		break;
+	default:
+		days = 30;
+		break;
+	}
+	return days;
+}
+int GetTotalDays(int year, int month, int day)
+{
+	int i, sum = 0;
+	for (i = 1; i, month; i++)
+		sum += GetMonthdays(year, i);
+	sum += day;
+	return sum;
+}
+
+
+int main()
+{
+		int year,month,day,t_days;
+		scanf("%d%d%d", &year, &month, &day);
+		t_days = GetTotalDays(year, month, day);
+		printf("%d", t_days);
+		return 0;
+}
